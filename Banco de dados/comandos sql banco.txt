@@ -1,0 +1,90 @@
+Criação da primeira tabela e seus campos
+
+CREATE TABLE `db_fromzehotohero`.`tb_users` (`userid` INT NOT NULL AUTO_INCREMENT , `username`  VARCHAR(50) NOT NULL , `email`  VARCHAR(50) NOT NULL , PRIMARY KEY (`userid`)) ENGINE = InnoDB; 
+
+Criação da Segunda tabela no banco de dados a tb_posts
+
+CREATE TABLE `db_fromzehotohero`.`tb_posts` (`postsid` INT NOT NULL AUTO_INCREMENT , `posts` VARCHAR(200) NOT NULL , `userid` INT NOT NULL , PRIMARY KEY (`postsid`)) ENGINE = InnoDB; 
+
+Criação da Terceira tabela no banco de dados a tb_comments
+
+CREATE TABLE `db_fromzehotohero`.`tb_comments` (`commentsid` INT NOT NULL AUTO_INCREMENT , `comments` VARCHAR(200) NOT NULL , `userid` INT NOT NULL , `postsid` INT NOT NULL , PRIMARY KEY (`commentsid`)) ENGINE = InnoDB;
+
+
+Criação do primeiro usuário na tabela tb_users e inserção dos devidos valores
+
+INSERT INTO `tb_users`(`userid`, `username`, `email`) VALUES ('','akbar miranda','akbar@gmail.com')
+
+inserção do segundo usuário
+
+INSERT INTO `tb_users`(`userid`, `username`, `email`) VALUES ('','CLovis de Barros','clovis@gmail.com')
+
+inserção do terceiro usuário
+
+INSERT INTO `tb_users`(`userid`, `username`, `email`) VALUES ('', 'Floriano Peixoto','floriano@gmail.com')
+
+criação do primeiro post na tabela tb_posts
+
+INSERT INTO `tb_posts`(`postsid`, `posts`, `userid`, `commentsid`) VALUES ('','O Brasil sifu ','7','')
+
+
+criação do segundo post na tabela tb_posts
+
+INSERT INTO `tb_posts`(`postsid`, `posts`, `userid`, `commentsid`) VALUES ('','A Argentina vai ser campeã ','8','')
+
+
+criação do terceiro post na tabela tb_posts
+
+INSERT INTO `tb_posts`(`postsid`, `posts`, `userid`, `commentsid`) VALUES ('','Portugal vai ser o campeão','9','')
+
+Criação do primeiro comentário
+
+INSERT INTO `tb_comments`(`commentsid`, `comments`, `userid`, `postsid`) VALUES ('','Rapaz, verdade. O pior de tudo foi a atitude do Tite','8','1')
+
+Criação do segundo comentário
+
+INSERT INTO `tb_comments`(`commentsid`, `comments`, `userid`, `postsid`) VALUES ('','Sei não. Meci só ganha no Barcelona','7','2')
+
+Criação do terceiro comentário
+
+INSERT INTO `tb_comments`(`commentsid`, `comments`, `userid`, `postsid`) VALUES ('','Não merece, futebol muito fraco.','7','3')
+
+Criação do quarto comentário
+
+INSERT INTO `tb_comments`(`commentsid`, `comments`, `userid`, `postsid`) VALUES ('','Vai nada amiro, Vai dar Portugal mesmo','9','2')
+
+adcionando chave estrangeira na tabela posts
+
+ALTER TABLE tb_posts
+ADD FOREIGN KEY (userid) REFERENCES tb_user(userid); 
+
+
+Adcionando chave estrangeira na tabela tb_comments
+
+ALTER TABLE tb_comments
+ADD FOREIGN KEY (userid) REFERENCES tb_user(userid); 
+
+ALTER TABLE tb_comments
+ADD FOREIGN KEY (postsid) REFERENCES tb_posts(postsid); 
+
+
+comando join para retornar os id autores dos posts seus nomes, os posts, os comentários dos posts e o id de quem fez o comentário
+
+SELECT tb_users.userid, tb_users.username, tb_posts.posts, tb_comments.comments, tb_comments.userid
+FROM  tb_posts 
+INNER JOIN tb_users ON tb_posts.userid= tb_users.userid
+INNER JOIN tb_comments ON tb_posts.postsid=tb_comments.postsid
+
+comando join para retornar os id autores dos posts seus nomes, os posts, os comentários dos posts e o id de quem fez o comentário, criando um apelido para
+retornar o nome ao invés do ID do usuário.
+
+SELECT tb_users.userid, tb_users.username, tb_posts.posts, tb_comments.comments, tcu.username as comentador
+FROM  tb_posts 
+INNER JOIN tb_users ON tb_posts.userid= tb_users.userid
+INNER JOIN tb_comments ON tb_posts.postsid=tb_comments.postsid
+LEFT JOIN tb_users tcu  ON tcu.userid=tb_comments.userid
+
+
+
+
+

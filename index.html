@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AkbarFlix</title>
+    <link rel="stylesheet" href="./login.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href=""><img src="./assets/img/LOGO.png" alt="" /></a>
+        </div>
+      </nav>
+      <main>
+        <div class="promocao-top">
+          <h2>Fácil Navegação!</h2>
+        </div>
+        <div class="promocao">
+          <div class="navegacao">
+            <input
+              class="arrow-left control"
+              type="image"
+              img
+              src="./assets/img/kuba_arrow_button_set_1.svg"
+              aria-label="Próxima imagem"
+              height="40px"
+              width="100px"
+            />
+            <input
+              type="image"
+              class="arrow-right control"
+              img
+              src="./assets/img/kuba_arrow_button_set_2.svg"
+              aria-label="Próxima imagem"
+              height="40px"
+              width="100px"
+            />
+            <div class="promocao-wrapper">
+              <div class="gallery">
+                <img
+                  src="./assets/img/1899.png"
+                  alt="movies"
+                  class="item current-item"
+                />
+                <img
+                  src="./assets/img/Escola do bem e do mal.png"
+                  alt="movies"
+                  class="item"
+                />
+                <img
+                  src="./assets/img/exercito do amanha.png"
+                  alt="movies"
+                  class="item"
+                />
+                <img src="./assets/img/minions.png" alt="movies" class="item" />
+                <img
+                  src="./assets/img/terra dos sonhos.png"
+                  alt="movies"
+                  class="item"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="promocao-mid">
+            <h2>As melhores séries!</h2>
+            <h2>Os melhores filmes!</h2>
+          </div>
+          <div class="promocao-footer">
+            <h1>Promoção imperdível!</h1>
+            <h1 class="preco">R$ 9,90 <span>mês</span></h1>
+            <a href="#Cadastrar"><button>Eu quero</button></a>
+          </div>
+        </div>
+        <div class="divider2"></div>
+        <form action="" name="fomulario1">
+          <h1>Cadastro<a name="Cadastrar"></a></h1>
+          <div class="form-c">
+            <input type="email" name="Email" placeholder="Email" required />
+            <input
+              type="text"
+              name="Telefone"
+              placeholder="Telefone"
+              required
+            />
+            <input type="password" name="Senha" placeholder="Senha" required />
+            <input
+              type="password"
+              name="Senha2"
+              placeholder=" Confirme a Senha"
+              required
+            />
+
+            <input type="text" name="CPF" placeholder="CPF" required />
+
+            <input
+              class="getcep"
+              type="text"
+              name="CEP"
+              placeholder="CEP"
+              required
+            />
+            <input
+              disabled
+              type="text"
+              name="Logradouro"
+              placeholder="Logradouro"
+            />
+            <div class="form-c-footer">
+              <input disabled type="text" name="Bairro" placeholder="Bairro" />
+              <input
+                disabled
+                type="text"
+                name="Localidade"
+                placeholder="Cidade"
+              />
+              <input disabled type="text" name="UF" placeholder="Estado" />
+              <input type="text" name="Numero" placeholder="Número" required />
+              <input type="text" name="Complemento" placeholder="Complemento" />
+            </div>
+            <button name="Cadastrar"><a href="#Entrar">Cadastrar</a></button>
+          </div>
+        </form>
+        <div class="divider3"></div>
+        <form>
+          <h1>Entrar<a name="Entrar"></a></h1>
+          <div class="form-g">
+            <input type="text" placeholder="Login com Email" required />
+            <input type="password" placeholder="Senha" required />
+            <button>
+              <a
+                href="https://www.youtube.com/@AkbarMiranda/videos"
+                target="_blank"
+                >Entrar</a
+              >
+            </button>
+          </div>
+          <div class="form-footer">
+            <input id="check" type="checkbox" />
+            <label style="margin-left: 10px" for="check">Lembre-me</label>
+            <p>Precisa de ajuda?</p>
+          </div>
+        </form>
+        <div class="box-description">
+          <a href="#"
+            ><img src="./assets/img/facebook.png" />Logar com o facebook</a
+          >
+          <p>
+            Não é assinante? <span><a href="#">Inscreva-se agora</a> </span>
+          </p>
+          <p>
+            Está página é protegida pelo google reCaptcha para garantir que você
+            não é um robô
+            <a href="#">Saiba mais</a>
+          </p>
+        </div>
+      </main>
+      <div class="divider"></div>
+      <footer class="footer-login">
+        <div class="box-footer">
+          <p>Perguntas? Contate-nos</p>
+        </div>
+        <div class="box-links">
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Ajuda</a></li>
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Informações</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="./login.js"></script>
+</html>
