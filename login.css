@@ -416,9 +416,14 @@ footer {
     .promocao-footer h1 {
       font-size: 30px;
     }
-    .preco h1 {
+    .promocao-footer .preco {
+      font-size: 20px;
+      color: white;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    /* .preco h2 {
       font-size: 25px;
-    }
+    } */
     .box-links {
       margin-left: 20px;
     }
