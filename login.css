@@ -34,6 +34,7 @@ main {
   background-color: #000101a8;
   max-width: 600px;
   margin: 0 auto 80px;
+  padding-top: 10px;
   padding: 20px;
   color: #737373;
 }
@@ -156,8 +157,8 @@ main form .form-g input {
   text-align: center;
   margin: 0 auto;
   color: white;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .promocao-mid h2 {
   padding: 20px;
