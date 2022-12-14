@@ -73,6 +73,9 @@ main form .form-g input {
 .promocao-wrapper::-webkit-scrollbar {
   display: none;
 }
+.promocao-wrapper {
+  scrollbar-width: none;
+}
 .gallery {
   display: flex;
   flex-flow: row nowrap;
