@@ -356,10 +356,15 @@ footer {
     max-width: 100%;
     padding: 10px;
   }
-  .logo {
-    display: none;
+  nav {
+    position: relative;
   }
-
+  nav .logo {
+    width: 50%;
+  }
+  nav .logo img {
+    width: 150px;
+  }
   .promocao-mid {
     display: flex;
     flex-direction: row;
