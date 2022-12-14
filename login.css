@@ -319,7 +319,7 @@ footer {
 }
 
 .footer-login {
-  display: flex;
+  position: sticky;
   margin-bottom: 0 auto;
   flex-direction: column;
   max-width: 800px;
@@ -412,6 +412,7 @@ footer {
     }
 
     .footer-login {
+      position: inherit;
       display: flex;
       flex-direction: row;
       padding-left: 10px;
