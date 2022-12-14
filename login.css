@@ -403,6 +403,11 @@ footer {
     .preco h1 {
       font-size: 25px;
     }
+    .form-c-footer input {
+      display: inline-block;
+      width: 130px;
+    }
+
     .footer-login {
       display: inline;
       padding-left: 10px;
