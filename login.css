@@ -359,6 +359,11 @@ footer {
   .logo {
     display: none;
   }
+
+  .promocao-mid {
+    display: flex;
+    flex-direction: row;
+  }
   .box-description {
     margin-top: 20px;
   }
