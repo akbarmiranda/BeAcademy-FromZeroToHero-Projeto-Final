@@ -400,6 +400,9 @@ footer {
     .promocao-wrapper {
       font-size: 25px;
     }
+    .promocao-mid h2 {
+      font-size: 15px;
+    }
     .preco h1 {
       font-size: 25px;
     }
@@ -411,6 +414,18 @@ footer {
     .footer-login {
       display: inline;
       padding-left: 10px;
+    }
+
+    .promocao-top {
+      text-align: center;
+      margin: 0 auto;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .promocao-top h2 {
+      font-size: 15px;
     }
 
     .promocao-footer h1 {
