@@ -352,11 +352,6 @@ footer {
     background-image: none;
     background-color: black;
   }
-  main {
-    margin: 0 auto;
-    max-width: 70%;
-    padding-right: 25px;
-  }
   nav {
     position: relative;
   }
@@ -369,6 +364,9 @@ footer {
   .promocao-mid {
     display: flex;
     flex-direction: row;
+  }
+  .form-c-footer input {
+    width: 100%;
   }
   .box-description {
     margin-top: 20px;
@@ -417,13 +415,6 @@ footer {
       width: 130px;
     }
 
-    .footer-login {
-      position: inherit;
-      display: flex;
-      flex-direction: row;
-      padding-left: 10px;
-    }
-
     .promocao-top {
       text-align: center;
       margin: 0 auto;
@@ -444,6 +435,15 @@ footer {
       color: white;
       padding-top: 20px;
       padding-bottom: 20px;
+    }
+    .form-c-footer input {
+      width: 100%;
+    }
+    .footer-login {
+      position: inherit;
+      display: flex;
+      flex-direction: row;
+      padding-left: 10px;
     }
     .box-links {
       margin-left: 20px;
